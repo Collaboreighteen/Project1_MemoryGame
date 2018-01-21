@@ -1,0 +1,21 @@
+import platform
+import os
+
+operatingSystem = platform.system()
+
+print("Hello and welcome to our memory game")
+input("Please remember these words: Dog, Hamster, Giraffe (Press Enter to Continue)")
+
+#for i in range(100): # Hacky workaround for "clearing" the screen
+    #print()
+
+if operatingSystem == "Windows":
+    os.system("cls")
+else:
+    os.system("clear")
+
+answer = input("Which of the words started with D? \n")
+if answer.lower() == 'dog':
+    print("That's totally correct!")
+else:
+    print("Nope, fuuuuuuuuuck you")
